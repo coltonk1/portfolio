@@ -56,19 +56,22 @@ export default function ScrollSpyNav({ sections }) {
             setProgress(percent);
         };
 
-        const timeout = setTimeout(() => {
-            requestAnimationFrame(() => {
-                updatePositions();
-                handleScroll();
-            });
-        }, 10);
+        requestAnimationFrame(() => {
+            updatePositions();
+            handleScroll();
+        });
 
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", updatePositions);
+        function updateAll() {
+            handleScroll();
+            updatePositions();
+        }
+
+        window.addEventListener("scroll", updateAll);
+        window.addEventListener("resize", updateAll);
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", updatePositions);
+            window.removeEventListener("scroll", updateAll);
+            window.removeEventListener("resize", updateAll);
             clearTimeout(timeout);
         };
     }, [sections]);
