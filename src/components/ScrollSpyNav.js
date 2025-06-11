@@ -56,16 +56,12 @@ export default function ScrollSpyNav({ sections }) {
             setProgress(percent);
         };
 
-        useEffect(() => {
-            const timeout = setTimeout(() => {
-                requestAnimationFrame(() => {
-                    updatePositions();
-                    handleScroll();
-                });
-            }, 10);
-
-            return () => clearTimeout(timeout);
-        }, []);
+        const timeout = setTimeout(() => {
+            requestAnimationFrame(() => {
+                updatePositions();
+                handleScroll();
+            });
+        }, 10);
 
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", updatePositions);
@@ -73,6 +69,7 @@ export default function ScrollSpyNav({ sections }) {
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("resize", updatePositions);
+            clearTimeout(timeout);
         };
     }, [sections]);
 
