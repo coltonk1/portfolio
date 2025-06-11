@@ -1,0 +1,30 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7F5AF0" />
+      <stop offset="100%" stop-color="#2CBDFB" />
+    </linearGradient>
+  </defs>
+
+  <!-- Thicker abstract arc (suggests "C") -->
+  <path
+    d="M85 30A40 40 0 1 0 85 90"
+    stroke="url(#grad)"
+    stroke-width="14"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <!-- Inner geometric shape, thicker -->
+  <path
+    d="M65 45L80 60L65 75"
+    stroke="url(#grad)"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Center dot, also bigger -->
+  <circle cx="60" cy="60" r="6" fill="url(#grad)" />
+</svg>

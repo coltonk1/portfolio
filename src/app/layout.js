@@ -9,7 +9,11 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
     title: "Colton Karaffa",
-    description: "description",
+    description:
+        "Custom websites for small businesses, startups, and individuals — fast, responsive, SEO-ready, and designed to convert. No templates, just clean code and tailored design.",
+    icons: {
+        icon: "/logo.svg",
+    },
 };
 
 export default function RootLayout({ children }) {
