@@ -1,0 +1,275 @@
+[
+    {
+        "slug": "trackifyjobs",
+        "title": "TrackifyJobs",
+        "role": "Full-stack Developer",
+        "clientType": "Personal SaaS Project",
+        "preview": "/projects/trackifyjobs/main2.webp",
+        "full_res": "/projects/trackifyjobs/main.webp",
+        "personal": true,
+        "isActive": false,
+        "date": "2025-04-15",
+        "badges": [
+            "Next.js",
+            "Go",
+            "Supabase",
+            "Stripe API",
+            "TailwindCSS",
+            "Gemini API"
+        ],
+        "summary": "TrackifyJobs is a job tracking SaaS built for serious job seekers. It combines NLP resume scoring, automated follow-ups, and a streamlined dashboard to reduce stress and increase offer rates. The goal was to make application management effortless and intelligent.",
+        "sections": [
+            {
+                "heading": "Context & Problem",
+                "body": "During internship season, I noticed peers were overwhelmed trying to manage dozens of applications with spreadsheets and notes. They often missed deadlines, forgot follow-ups, and sent generic resumes. Existing tools like Huntr or Trello weren't purpose-built and lacked intelligence.\n\nI wanted to design something lean, fast, and helpful, so I made a dashboard tailored for technical job seekers that could score resumes, show what’s missing, and help plan actions.",
+                "images": ["/projects/trackifyjobs/problem.webp"],
+                "bullets": [
+                    "Too many apps, too little feedback",
+                    "No automated resume personalization or scoring",
+                    "People forgot to follow up or didn’t know which job they were a good fit for"
+                ]
+            },
+            {
+                "heading": "Design & UX Goals",
+                "body": "From the start, the design needed to be clean, fast, and emotionally neutral — a workspace, not a gamified toy. I used Figma to wireframe dashboard flows that emphasize clarity and control. The color palette is muted with occasional highlight colors to reduce anxiety and help users focus.\n\nKey flows like job entry, resume comparison, and reminders were designed to take under 60 seconds from start to finish. A sidebar layout made the dashboard feel anchored and familiar.",
+                "images": [
+                    "/projects/trackifyjobs/wireframe1.webp",
+                    "/projects/trackifyjobs/wireframe2.webp"
+                ],
+                "bullets": [
+                    "Neutral UI with subtle hierarchy cues",
+                    "Minimized decision friction with focused CTA areas",
+                    "Dark/light mode support for visual comfort"
+                ]
+            },
+            {
+                "heading": "Technical Architecture",
+                "body": "The stack is fully serverless: Next.js frontend (app router), Supabase for database + auth, Stripe for billing, and a custom Go API deployed via Vercel functions to run NLP-heavy resume parsing and scoring. I used Gemini Pro for understanding job descriptions and resumes.\n\nScoring works by embedding job description + resume content and computing a cosine similarity score. I cached results and used supabase edge functions to avoid latency issues. User state is stored via RLS-secured Postgres tables.",
+                "images": [
+                    "/projects/trackifyjobs/architecture-diagram.webp",
+                    "/projects/trackifyjobs/api-output.webp"
+                ],
+                "bullets": [
+                    "Next.js app router, Tailwind + custom components",
+                    "Go backend for performance-critical logic",
+                    "Gemini-powered resume analysis + cache layer",
+                    "Supabase with RLS rules for secure user data access"
+                ]
+            },
+            {
+                "heading": "Launch & Outcome",
+                "body": "After a soft launch in university dev groups and subreddits, over 100 users signed up in the first month. Feedback centered around how helpful the resume scoring and timeline reminders were. Many users reported better interview callback rates and less stress.\n\nStripe was integrated with a simple pricing model: free tier with 10 resume analyses, $5/mo for unlimited scans and analytics. 11 users converted to paid in the first 30 days.",
+                "images": [
+                    "/projects/trackifyjobs/dashboard.webp",
+                    "/projects/trackifyjobs/analytics.webp"
+                ],
+                "bullets": [
+                    "100+ users in beta with consistent engagement",
+                    "First month conversion: 11 paid out of 100",
+                    "Strong retention from CS students and bootcamp grads"
+                ]
+            }
+        ],
+        "gallery": [
+            "/projects/trackifyjobs/ui-dashboard.webp",
+            "/projects/trackifyjobs/ui-settings.webp",
+            "/projects/trackifyjobs/ui-timeline.webp",
+            "/projects/trackifyjobs/ui-resume.webp"
+        ]
+    },
+    {
+        "slug": "waste-company",
+        "title": "Regional Waste Services",
+        "role": "UI/UX Designer",
+        "clientType": "Local Waste Management Service",
+        "personal": false,
+        "isActive": true,
+        "date": "2025-06-10",
+        "preview": "/projects/atbg/preview.webp",
+        "full_res": "/projects/atbg/rhomepage.webp",
+        "badges": [
+            "Figma",
+            "Accessibility Audit",
+            "Information Architecture",
+            "Responsive Design",
+            "SEO Optimization"
+        ],
+        "summary": "This local waste service provider website was originally built using an outdated WordPress template with inconsistent styling, poor contrast, broken navigation, and cluttered, low-quality images. I led a full redesign to improve accessibility, modernize the interface, and create a cleaner, more understandable experience across desktop, tablet, and mobile.",
+
+        "sections": [
+            {
+                "heading": "Initial Issues",
+                "body": "The original site was built on an outdated WordPress theme with inconsistent design patterns, broken links, and low-resolution images reused excessively. Navigation was unclear, with many dead-end pages and overlapping options. Core actions like checking service status or reaching support were hard to find. The visual hierarchy was weak, and the dashboard was overloaded with unnecessary options.",
+                "images": [
+                    {
+                        "src": "/projects/atbg/problem.webp",
+                        "label": "Legacy interface with unclear contrast and layout"
+                    },
+                    {
+                        "src": "/projects/atbg/clutter.webp",
+                        "label": "Homepage cluttered with repeated service tiles"
+                    }
+                ],
+                "bullets": [
+                    "Outdated WordPress template with hardcoded styling",
+                    "Broken or circular navigation flows",
+                    "Low-contrast text and weak visual hierarchy",
+                    "Pixelated and repetitive images",
+                    "Overloaded dashboard with nonessential controls"
+                ]
+            },
+            {
+                "heading": "Design Goals",
+                "body": "I focused on creating a cleaner, more intuitive layout with better spacing, clearer navigation, and modern visual styles. The design system was structured in Figma to support consistent typography, spacing, and button behavior. I updated image assets to be higher quality and ensured layout breakpoints worked across screen sizes. I also improved contrast and semantic HTML to move closer to accessibility best practices.",
+                "images": [
+                    {
+                        "src": "/projects/atbg/designguidepreview.webp",
+                        "label": "Style guide – typography, color, and layout tokens"
+                    },
+                    {
+                        "src": "/projects/atbg/responsive_example.webp",
+                        "label": "Responsive layout structure across screen sizes"
+                    }
+                ],
+                "bullets": [
+                    "Cleaned up visual hierarchy and spacing",
+                    "Structured reusable components in Figma",
+                    "Improved navigation clarity and layout consistency",
+                    "Replaced low-res assets with optimized image content",
+                    "Improved contrast and markup for better accessibility"
+                ],
+                "beforeAfter": [
+                    {
+                        "label": "Homepage Redesign",
+                        "before": "/projects/atbg/phomepage.webp",
+                        "after": "/projects/atbg/preview.webp"
+                    },
+                    {
+                        "label": "Login Redesign",
+                        "before": "/projects/atbg/plogin.webp",
+                        "after": "/projects/atbg/rlogin.webp"
+                    }
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "/projects/atbg/rhomepage.webp",
+                "label": "Final homepage – desktop [Branding redacted]"
+            },
+            {
+                "src": "/projects/atbg/new-dashboard-desktop.webp",
+                "label": "Redesigned service dashboard – desktop [Branding and names redacted]"
+            },
+            {
+                "src": "/projects/atbg/new-contact-desktop.webp",
+                "label": "Contact form layout with improved accessibility [Branding and names redacted]"
+            },
+            {
+                "src": "/projects/atbg/new-home-services.webp",
+                "label": "Pricing and service tiers layout"
+            },
+            {
+                "src": "/projects/atbg/new-product-page-desktop.webp",
+                "label": "Redesigned product page [Branding redacted]"
+            }
+        ]
+    },
+    {
+        "slug": "children-dentist",
+        "title": "Children's Dentistry",
+        "role": "UI/UX Designer",
+        "clientType": "Frontend Developer",
+        "preview": "/projects/childdental/preview.webp",
+        "personal": false,
+        "isActive": false,
+        "date": "2025-05-15",
+        "badges": ["Figma"],
+        "gallery": []
+    },
+    {
+        "slug": "handwriting-game",
+        "title": "Handwriting Game Homepage",
+        "role": "UI/UX Designer & Full-Stack Developer",
+        "clientType": "Collaborative Educational Project",
+        "preview": "/projects/handwriting-game/preview.webp",
+        "personal": false,
+        "isActive": false,
+        "date": "2025-05-15",
+        "badges": ["Figma", "Next.js", "TailwindCSS", "Full-Stack"],
+        "gallery": []
+    },
+    {
+        "slug": "boxer-breeder",
+        "title": "Boxer Puppy Breeder Website",
+        "role": "UI/UX Designer",
+        "clientType": "Frontend Developer",
+        "preview": "/projects/boxer-breeder/preview.webp",
+        "personal": false,
+        "isActive": false,
+        "date": "2025-05-28",
+        "badges": ["Figma", "UI/UX Design", "Responsive Layout"],
+        "gallery": []
+    },
+    {
+        "slug": "codehub",
+        "title": "CodeHub Website",
+        "role": "UI/UX Designer",
+        "clientType": "Personal Project",
+        "preview": "/projects/codehub/preview.webp",
+        "personal": true,
+        "isActive": false,
+        "date": "2025-06-01",
+        "badges": [
+            "Figma",
+            "Responsive Design",
+            "UI System",
+            "Web Accessibility"
+        ],
+        "summary": "I led the UI/UX design and backend development for CodeHub, a student-run developer organization at the University of Georgia. The site serves as a central hub for forms, starter code, project showcases, and FAQs. I designed the full visual system and built the landing page frontend myself, while also contributing to backend architecture and helping coordinate integration work across the broader frontend. The focus was on creating a modular, accessible platform aligned with CodeHub’s mission to support beginner-friendly development and inclusive tech communities.",
+        "gallery": []
+    },
+    {
+        "slug": "ecommerce-title-classifier",
+        "title": "E-Commerce Product Title Classification",
+        "role": "Machine Learning Researcher & Developer",
+        "clientType": "Academic Research",
+        "preview": "/projects/ecommerce-title-classifier/preview.webp",
+        "personal": true,
+        "isActive": false,
+        "date": "2024-12-01",
+        "badges": [
+            "Python",
+            "Scikit-learn",
+            "NLP",
+            "TF-IDF",
+            "SVC",
+            "Logistic Regression",
+            "Naive Bayes"
+        ],
+        "summary": "This project explores scalable machine learning methods for classifying e-commerce product titles into 248 categories using a dataset of over 1.4 million entries. I implemented a preprocessing pipeline with TF-IDF vectorization, stopword removal, normalization, and feature selection to the top 10,000 tokens. I evaluated multiple classifiers, including Linear SVC, Logistic Regression, and Multinomial Naive Bayes, with class-weighted adjustments to handle imbalance. The study showed that Linear SVC consistently performed best on large-scale product categorization tasks, demonstrating the viability of ML for text classification in e-commerce systems.",
+        "gallery": []
+    },
+    {
+        "slug": "boombox",
+        "title": "BoomBox – Mood-Based Music Recommendation App",
+        "role": "Lead Developer & Full-Stack Engineer",
+        "clientType": "Personal Project",
+        "preview": "/projects/boombox/preview.webp",
+        "personal": true,
+        "isActive": false,
+        "date": "2025-02-01",
+        "badges": [
+            "Next.js",
+            "React",
+            "TailwindCSS",
+            "MongoDB",
+            "Spotify API",
+            "Gemini API",
+            "Pinata",
+            "Auth0"
+        ],
+        "summary": "BoomBox is a full-stack web app that recommends music based on the emotional tone of user-uploaded images. I led a team of two in building a system that uses Gemini for image sentiment analysis, the Spotify API for mood-aligned song selection, and Pinata for decentralized image storage. The app supports user authentication via Auth0 and stores user data in MongoDB. I designed the system architecture, handled API integration, and built the landing and core app frontend. Users can create and share playlists, with built-in group collaboration features that support co-curated music discovery.",
+        "gallery": []
+    }
+]

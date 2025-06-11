@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme main {
+    --color-brand-mint: #62deac;
+
+    --color-brand-white: #f7f7f7;
+    --color-brand-off-white: #eae8f0;
+    --color-brand-grey: #2d2d2d;
+    --color-brand-purple: #7e3af2;
+    --color-brand-blue: #4f9de8;
+
+    --color-hero-color: #eae8f0;
+
+    --color-brand-translucent-purple: #7e3af210;
+    --color-footer-socials-bg: #eae8f0;
+    --padding-footer-socials: 0;
+}
+
+@layer dark {
+    [data-theme="dark"] {
+        --color-brand-mint: #3abf96; /* Darker and deeper mint */
+        --color-brand-blue: #6798d4; /* Muted, darker blue */
+        --color-brand-purple: #a873e9; /* Rich but slightly subdued purple */
+        --color-brand-translucent-purple: #8f44df22; /* Slightly stronger translucency */
+        --color-brand-grey: #e2e2e2; /* Light text gray for dark backgrounds */
+        --color-brand-off-white: #303040; /* Soft dark surface, like a card background */
+        --color-brand-white: #202025; /* True dark background (main page BG) */
+        --padding-footer-socials: 0.5rem;
+    }
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+} */
+
+* {
+    box-sizing: border-box;
+    color: var(--color-brand-grey);
+}
+
+body {
+    background: var(--color-brand-white);
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem); /* scales between mobile and desktop */
+    color: var(--color-brand-white);
+    font-weight: 500;
+    line-height: 1.1;
+    font-family: "Outfit", sans-serif;
+}
+
+h1 * {
+    font-family: "Outfit", sans-serif;
+    color: var(--color-brand-white);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    font-weight: 700;
+    position: relative;
+    font-family: "Outfit", sans-serif;
+    color: var(--color-brand-grey);
+}
+
+h3 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--color-brand-grey);
+}
+
+h4 {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    font-weight: 600;
+    color: var(--color-brand-grey);
+}
+
+h4 a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+}
+
+a {
+    display: block;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: 0.2s;
+    line-height: 1.2;
+    color: var(--color-brand-grey);
+}
+
+button {
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+}
+
+p {
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    font-weight: 400;
+    white-space: pre-wrap;
+    text-wrap: wrap;
+    color: var(--color-brand-grey);
+}
+
+h2,
+h3,
+h4,
+a,
+p {
+    color: var(--color-brand-grey);
+}
