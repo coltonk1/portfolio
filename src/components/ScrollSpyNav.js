@@ -56,10 +56,16 @@ export default function ScrollSpyNav({ sections }) {
             setProgress(percent);
         };
 
-        requestAnimationFrame(() => {
-            updatePositions();
-            handleScroll();
-        });
+        useEffect(() => {
+            const timeout = setTimeout(() => {
+                requestAnimationFrame(() => {
+                    updatePositions();
+                    handleScroll();
+                });
+            }, 10);
+
+            return () => clearTimeout(timeout);
+        }, []);
 
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", updatePositions);
