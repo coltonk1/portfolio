@@ -11,7 +11,7 @@ export default function PersonalProjectsPage() {
             <div className="mb-12">
                 <h2>Personal Projects</h2>
                 <p className="leading-relaxed mt-2 text-brand-grey">
-                    Real-world apps and tools I’ve built to solve my own
+                    Real-world apps and tools I've built to solve my own
                     problems, experiment with new stacks, or explore product
                     ideas.
                 </p>

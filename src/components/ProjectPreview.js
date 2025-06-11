@@ -7,7 +7,7 @@ export default function ProjectPreview({ data }) {
     if (!data) return;
 
     return (
-        <Link href={`case-studies/${data.slug}` || "#"}>
+        <Link href={`/case-studies/${data.slug}`}>
             <motion.div
                 className="flex flex-col gap-6 md:gap-10 items-stretch cursor-pointer group hover:[&_h3]:decoration-brand-purple"
                 initial={{ opacity: 0, y: 40 }}
