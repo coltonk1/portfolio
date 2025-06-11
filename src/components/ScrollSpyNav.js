@@ -37,8 +37,6 @@ export default function ScrollSpyNav({ sections }) {
             setPositions(newPositions);
         };
 
-        updatePositions();
-
         const handleScroll = () => {
             const lastSection = document.getElementById(
                 `section-${allSections.length - 1}`
@@ -57,6 +55,11 @@ export default function ScrollSpyNav({ sections }) {
 
             setProgress(percent);
         };
+
+        requestAnimationFrame(() => {
+            updatePositions();
+            handleScroll();
+        });
 
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", updatePositions);
