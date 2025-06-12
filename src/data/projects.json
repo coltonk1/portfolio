@@ -180,13 +180,94 @@
         "title": "Children's Dentistry",
         "role": "UI/UX Designer",
         "clientType": "Frontend Developer",
-        "preview": "/projects/childdental/preview.webp",
         "personal": false,
-        "isActive": false,
+        "isActive": true,
         "date": "2025-05-15",
-        "badges": ["Figma"],
-        "gallery": []
+        "preview": "/projects/childdental/redesigned_home_and_about_preview.webp",
+        "full_res": "/projects/childdental/redesigned_home_and_about_hd.webp",
+        "badges": ["Figma", "Responsive Design", "Accessibility Improvements"],
+        "summary": "This pediatric dental site, originally built in 2008, had outdated visual design, poor responsiveness, inconsistent navigation, and excessive use of clashing colors. I led a complete redesign to modernize the user experience while preserving some of the site's original charm. The new layout is responsive, accessible, and easier to navigate for parents and guardians.",
+        "sections": [
+            {
+                "heading": "Initial Issues",
+                "body": "The site had not been meaningfully updated since its creation in 2008. It suffered from accessibility issues including poor color contrast, unstructured text blocks, and layout problems on mobile devices. Many pages contained redundant or repeated navigation elements and there was little hierarchy to guide the user. The use of animal-themed visuals was playful but visually overpowering.",
+                "images": [
+                    {
+                        "src": "/projects/childdental/previous_home.webp",
+                        "label": "Legacy homepage layout with excessive color and weak hierarchy"
+                    },
+                    {
+                        "src": "/projects/childdental/previous_services.webp",
+                        "label": "Outdated services section with redundant links"
+                    }
+                ],
+                "bullets": [
+                    "Visual style inconsistent and cluttered",
+                    "Poor mobile responsiveness and no layout scaling",
+                    "Navigation with repeated or unclear link structures",
+                    "Lack of accessible font and contrast settings",
+                    "Animal imagery distracting rather than supportive"
+                ]
+            },
+            {
+                "heading": "Design Goals",
+                "body": "The redesign focused on simplifying the structure, improving readability, and retaining visual personality in a more subtle usable way. I created a consistent color palette based on accessible standards, cleaned up navigation flows, and restructured the content to work fluidly across devices. Subtle background animal patterns were retained to reflect the site's original identity without overwhelming users.",
+                "images": [
+                    {
+                        "src": "/projects/childdental/redesigned_home_and_about_preview.webp",
+                        "label": "Redesigned homepage with clear hierarchy and simplified layout"
+                    },
+                    {
+                        "src": "/projects/childdental/design_guide.webp",
+                        "label": "Design system with updated type colors and spacing rules"
+                    }
+                ],
+                "bullets": [
+                    "Structured and accessible layout across screen sizes",
+                    "Reduced color palette for readability and visual coherence",
+                    "Preserved thematic animal imagery in a toned down background role",
+                    "Improved content structure and semantic HTML",
+                    "Focused on ease of use for non technical users such as parents and guardians"
+                ],
+                "beforeAfter": [
+                    {
+                        "label": "Homepage Redesign",
+                        "before": "/projects/childdental/previous_home.webp",
+                        "after": "/projects/childdental/redesigned_home_and_about_preview.webp"
+                    },
+                    {
+                        "label": "Services Page Redesign",
+                        "before": "/projects/childdental/previous_services.webp",
+                        "after": "/projects/childdental/redesigned_services_preview.webp"
+                    }
+                ]
+            }
+        ],
+        "gallery": [
+            {
+                "src": "/projects/childdental/redesigned_home_and_about_hd.webp",
+                "label": "Redesigned homepage"
+            },
+            {
+                "src": "/projects/childdental/redesigned_services_hd.webp",
+                "label": "Modernized services page"
+            },
+
+            {
+                "src": "/projects/childdental/redesigned_atmosphere_hd.webp",
+                "label": "Improved image layout and page flow for atmosphere section"
+            },
+            {
+                "src": "/projects/childdental/redesigned_contact_hd.webp",
+                "label": "Contact page with improved accessibility and form structure"
+            },
+            {
+                "src": "/projects/childdental/redesigned_faq_hd.webp",
+                "label": "FAQ layout with readable content blocks and refined spacing"
+            }
+        ]
     },
+
     {
         "slug": "handwriting-game",
         "title": "Handwriting Game Homepage",
