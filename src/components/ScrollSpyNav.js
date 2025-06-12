@@ -72,7 +72,6 @@ export default function ScrollSpyNav({ sections }) {
         return () => {
             window.removeEventListener("scroll", updateAll);
             window.removeEventListener("resize", updateAll);
-            clearTimeout(timeout);
         };
     }, [sections]);
 
