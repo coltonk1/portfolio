@@ -71,6 +71,12 @@ export default function ProjectPreview({ data }) {
                         </div>
                     )}
                 </div>
+
+                {!data.isActive && (
+                    <p className="italic opacity-50">
+                        Case study not yet available.
+                    </p>
+                )}
             </motion.div>
         </Link>
     );
