@@ -244,7 +244,7 @@ function AboutMe() {
 
 I handle everything from designing intuitive interfaces in Figma to building scalable backends in Go and deploying production-ready web apps. My work spans solo personal projects, technical case studies, and real freelance sites for clients across industries like real estate, education, and services.
 
-I focus on building fast, usable, and cleanly designed software that actually works, and I enjoy taking full ownership of a project from idea to deployment.`}
+I focus on building fast, usable, and cleanly designed software that actually works.`}
                         </p>
                         <Button
                             variant={4}
