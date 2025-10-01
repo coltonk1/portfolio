@@ -1,18 +1,18 @@
-import { Inter, Outfit } from "next/font/google";
-import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import ThemeScript from "@/components/ThemeScript";
+import { Inter, Outfit } from 'next/font/google';
+import './globals.css';
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
+import ThemeScript from '@/components/ThemeScript';
 
-const inter = Inter({ subsets: ["latin"] });
-const outfit = Outfit({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata = {
-    title: "Colton Karaffa",
+    title: 'Colton Karaffa',
     description:
-        "Custom websites for small businesses, startups, and individuals — fast, responsive, SEO-ready, and designed to convert. No templates, just clean code and tailored design.",
+        'Custom websites for small businesses, startups, and individuals — fast, responsive, SEO-ready, and designed to convert. No templates, just clean code and tailored design.',
     icons: {
-        icon: "/logo.svg",
+        icon: '/logo.svg',
     },
 };
 

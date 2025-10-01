@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import Button from '@/components/Button';
 export default function Custom404() {
     return (
         <div className="flex-1 flex flex-col items-center justify-center text-center px-6">
@@ -7,10 +7,10 @@ export default function Custom404() {
             </h1>
             <h2 className="mb-2">This page doesn't exist.</h2>
             <p className="max-w-md mb-8">
-                Either you mistyped the URL or the page has moved. Don't worry,
-                you can still find your way.
+                Either you mistyped the URL or the page has moved. Don't worry, you can still find
+                your way.
             </p>
-            <Button variant={4} href="/" text={"Back to Home"} />
+            <Button variant={4} href="/" text={'Back to Home'} />
         </div>
     );
 }
