@@ -3,6 +3,7 @@ import './globals.css';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import ThemeScript from '@/components/ThemeScript';
+import LineSrc from '@/assets/herolines.webp';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -25,6 +26,16 @@ export const metadata = {
         'Custom websites for small businesses, startups, and individuals — fast, responsive, SEO-ready, and designed to convert. No templates, just clean code and tailored design.',
     icons: {
         icon: '/logo.svg',
+    },
+    other: {
+        'link:preload': [
+            {
+                rel: 'preload',
+                as: 'image',
+                href: LineSrc.src,
+                fetchpriority: 'high',
+            },
+        ],
     },
 };
 

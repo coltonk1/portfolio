@@ -18,16 +18,11 @@ import GithubIcon from '@/assets/github.webp';
 import EmailIcon from '@/assets/email.webp';
 import Footer from '@/components/Footer';
 
-import Head from 'next/head';
-
 // Main homepage layout for portfolio
 // Contains hero, project showcases, about section, pricing, and contact CTA
 export default function Home() {
     return (
         <>
-            <Head>
-                <link rel="preload" as="image" href={LineSrc.src} fetchpriority="high" />
-            </Head>
             <main className="items-center flex flex-col gap-16 md:gap-24 lg:gap-40 mb-16 md:mb-24 lg:mb-40 w-full">
                 <div className="w-full">
                     <HeroSection />
