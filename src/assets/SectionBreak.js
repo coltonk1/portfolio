@@ -1,19 +1,15 @@
-import * as React from "react";
+import * as React from 'react';
 const SvgComponent = (props) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
         viewBox="0 0 1920 241"
-        height="auto"
         preserveAspectRatio="none"
         fill="none"
         {...props}
     >
         <g strokeWidth={3} clipPath="url(#a)" opacity={0.15}>
-            <path
-                stroke="url(#b)"
-                d="M0 120.867c240-80 480 80 720 0s480-80 720 0 240 80 480 0"
-            />
+            <path stroke="url(#b)" d="M0 120.867c240-80 480 80 720 0s480-80 720 0 240 80 480 0" />
             <path
                 stroke="url(#c)"
                 d="M0 120.867c240 80 480-80 720 0s480 80 720 0 240-80 480 0"

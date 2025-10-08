@@ -18,11 +18,16 @@ import GithubIcon from '@/assets/github.webp';
 import EmailIcon from '@/assets/email.webp';
 import Footer from '@/components/Footer';
 
+import Head from 'next/head';
+
 // Main homepage layout for portfolio
 // Contains hero, project showcases, about section, pricing, and contact CTA
 export default function Home() {
     return (
         <>
+            <Head>
+                <link rel="preload" as="image" href={LineSrc.src} fetchpriority="high" />
+            </Head>
             <main className="items-center flex flex-col gap-16 md:gap-24 lg:gap-40 mb-16 md:mb-24 lg:mb-40 w-full">
                 <div className="w-full">
                     <HeroSection />
@@ -50,8 +55,8 @@ export default function Home() {
 function HeroSection() {
     return (
         <section className="bg-gradient-to-r from-brand-purple to-brand-blue flex flex-col items-center w-full relative">
-            <img
-                src={LineSrc.src}
+            <div
+                // src={LineSrc.src}
                 alt="Hero lines"
                 draggable={false}
                 className="object-fill absolute select-none"
@@ -64,7 +69,10 @@ function HeroSection() {
                     maskImage:
                         'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)',
                     opacity: 0.1,
+                    backgroundImage: `url(${LineSrc.src})`,
+                    backgroundSize: 'cover',
                 }}
+                aria-hidden="true"
             />
 
             <div className="w-full max-w-7xl px-6 md:px-12 py-16 sm:py-32 md:py-32 flex flex-col lg:flex-row gap-12 items-center z-10">
