@@ -54,12 +54,16 @@ function HeroSection() {
                 src={LineSrc.src}
                 alt="Hero lines"
                 draggable={false}
-                className="object-fill opacity-5 absolute select-none"
+                className="object-fill absolute select-none"
                 style={{
-                    position: 'absolute',
                     width: '100%',
                     height: '100%',
                     objectFit: 'fill',
+                    WebkitMaskImage:
+                        'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)',
+                    maskImage:
+                        'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)',
+                    opacity: 0.1,
                 }}
             />
 
@@ -80,9 +84,11 @@ function HeroSection() {
                     <h1 className="text-4xl sm:text-5xl font-bold !text-hero-color text-center w-full lg:text-left">
                         Hi, I'm <b className="!text-hero-color">Colton Karaffa</b>
                     </h1>
-                    <p className="text-lg !text-hero-color max-w-xl mx-auto md:mx-0 text-center w-full lg:text-left">
-                        I design and build websites that look great, work on any device, and help
-                        people get things done.
+                    <p
+                        id="hero-desc"
+                        className="text-lg !text-hero-color max-w-xl mx-auto md:mx-0 text-center w-full lg:text-left"
+                    >
+                        I design and build modern, fast websites.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 md:gap-4 items-center justify-center lg:justify-start">
                         <Button variant={1} href={'/client-work'} text={'Client Work'} />

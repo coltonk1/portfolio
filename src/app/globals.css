@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme main {
     --color-brand-mint: #62deac;
@@ -17,7 +17,7 @@
 }
 
 @layer dark {
-    [data-theme="dark"] {
+    [data-theme='dark'] {
         --color-brand-mint: #3abf96; /* Darker and deeper mint */
         --color-brand-blue: #6798d4; /* Muted, darker blue */
         --color-brand-purple: #a873e9; /* Rich but slightly subdued purple */
@@ -47,7 +47,7 @@ body {
 }
 
 * {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-inter), sans-serif;
 }
 
 h1 {
@@ -55,11 +55,11 @@ h1 {
     color: var(--color-brand-white);
     font-weight: 500;
     line-height: 1.1;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-playfair), sans-serif;
 }
 
 h1 * {
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-playfair), sans-serif;
     color: var(--color-brand-white);
 }
 
@@ -67,13 +67,14 @@ h2 {
     font-size: clamp(1.8rem, 4.5vw, 3rem);
     font-weight: 700;
     position: relative;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-playfair), sans-serif;
     color: var(--color-brand-grey);
 }
 
 h3 {
     font-size: clamp(1.4rem, 3vw, 2rem);
     font-weight: 600;
+    font-family: var(--font-playfair), sans-serif;
     color: var(--color-brand-grey);
 }
 
@@ -105,7 +106,7 @@ button {
 }
 
 p {
-    font-size: clamp(0.95rem, 2vw, 1rem);
+    font-size: 1.1rem;
     font-weight: 400;
     white-space: pre-wrap;
     text-wrap: wrap;

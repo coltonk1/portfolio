@@ -1,11 +1,23 @@
-import { Inter, Outfit } from 'next/font/google';
+import { Inter, Outfit, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import ThemeScript from '@/components/ThemeScript';
 
-const inter = Inter({ subsets: ['latin'] });
-const outfit = Outfit({ subsets: ['latin'] });
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+});
+
+const outfit = Outfit({
+    subsets: ['latin'],
+    variable: '--font-outfit',
+});
+
+const playfair = Playfair_Display({
+    subsets: ['latin'],
+    variable: '--font-playfair',
+});
 
 export const metadata = {
     title: 'Colton Karaffa',
@@ -23,7 +35,7 @@ export default function RootLayout({ children }) {
                 <ThemeScript />
             </head>
             <body
-                className={`${inter.className} ${outfit.className} antialiased min-h-screen flex flex-col`}
+                className={`${inter.variable} ${outfit.variable} ${playfair.variable} antialiased min-h-screen flex flex-col`}
             >
                 <NavBar />
                 {children}
