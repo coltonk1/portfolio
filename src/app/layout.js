@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ThemeScript from '@/components/ThemeScript';
 import LineSrc from '@/assets/herolines.webp';
 import Script from 'next/script';
+import AdsScripts from '@/components/AdScript';
 const inter = Inter({
     subsets: ['latin'],
     variable: '--font-inter',
@@ -39,19 +40,7 @@ export default function RootLayout({ children }) {
             <body
                 className={`${inter.variable} ${outfit.variable} ${playfair.variable} antialiased min-h-screen flex flex-col`}
             >
-                <Script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=AW-17644189543"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-ads" strategy="afterInteractive">
-                    {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17644189543');
-          `}
-                </Script>
+                <AdsScripts />
                 <NavBar />
                 {children}
             </body>
