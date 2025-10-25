@@ -9,14 +9,7 @@
         "personal": true,
         "isActive": false,
         "date": "2025-04-15",
-        "badges": [
-            "Next.js",
-            "Go",
-            "Supabase",
-            "Stripe API",
-            "TailwindCSS",
-            "Gemini API"
-        ],
+        "badges": ["Next.js", "Go", "Supabase", "Stripe API", "TailwindCSS", "Gemini API"],
         "summary": "TrackifyJobs is a job tracking SaaS built for serious job seekers. It combines NLP resume scoring, automated follow-ups, and a streamlined dashboard to reduce stress and increase offer rates. The goal was to make application management effortless and intelligent.",
         "sections": [
             {
@@ -85,7 +78,7 @@
         "personal": false,
         "isActive": true,
         "date": "2025-06-10",
-        "preview": "/projects/atbg/preview.webp",
+        "preview": "/projects/atbg/atbg_landing.png",
         "full_res": "/projects/atbg/rhomepage.webp",
         "badges": [
             "Figma",
@@ -182,8 +175,8 @@
         "clientType": "Frontend Developer",
         "personal": false,
         "isActive": true,
-        "date": "2025-05-15",
-        "preview": "/projects/childdental/redesigned_home_and_about_preview.webp",
+        "date": "2025-9-01",
+        "preview": "/projects/drlisa_landing.png",
         "full_res": "/projects/childdental/redesigned_home_and_about_hd.webp",
         "badges": ["Figma", "Responsive Design", "Accessibility Improvements"],
         "summary": "This pediatric dental site, originally built in 2008, had outdated visual design, poor responsiveness, inconsistent navigation, and excessive use of clashing colors. I led a complete redesign to modernize the user experience while preserving some of the site's original charm. The new layout is responsive, accessible, and easier to navigate for parents and guardians.",
@@ -301,12 +294,7 @@
         "personal": true,
         "isActive": false,
         "date": "2025-06-01",
-        "badges": [
-            "Figma",
-            "Responsive Design",
-            "UI System",
-            "Web Accessibility"
-        ],
+        "badges": ["Figma", "Responsive Design", "UI System", "Web Accessibility"],
         "summary": "I led the UI/UX design and backend development for CodeHub, a student-run developer organization at the University of Georgia. The site serves as a central hub for forms, starter code, project showcases, and FAQs. I designed the full visual system and built the landing page frontend myself, while also contributing to backend architecture and helping coordinate integration work across the broader frontend. The focus was on creating a modular, accessible platform aligned with CodeHub’s mission to support beginner-friendly development and inclusive tech communities.",
         "gallery": []
     },
@@ -351,6 +339,50 @@
             "Auth0"
         ],
         "summary": "BoomBox is a full-stack web app that recommends music based on the emotional tone of user-uploaded images. I led a team of two in building a system that uses Gemini for image sentiment analysis, the Spotify API for mood-aligned song selection, and Pinata for decentralized image storage. The app supports user authentication via Auth0 and stores user data in MongoDB. I designed the system architecture, handled API integration, and built the landing and core app frontend. Users can create and share playlists, with built-in group collaboration features that support co-curated music discovery.",
+        "gallery": []
+    },
+    {
+        "slug": "summitmnd",
+        "title": "Summit Management and Development",
+        "role": "Developer & UI/UX Designer",
+        "clientType": "Local Management Company",
+        "preview": "/projects/summit_landing.png",
+        "personal": false,
+        "isActive": true,
+        "date": "2025-10-01",
+        "badges": [
+            "Next.js",
+            "React",
+            "TailwindCSS",
+            "MongoDB",
+            "Spotify API",
+            "Gemini API",
+            "Pinata",
+            "Auth0"
+        ],
+        "summary": "",
+        "gallery": []
+    },
+    {
+        "slug": "swatc",
+        "title": "S.W.A.T Construction Company",
+        "role": "Developer & UI/UX Designer",
+        "clientType": "Construction Company",
+        "preview": "/projects/swat_landing.png",
+        "personal": false,
+        "isActive": true,
+        "date": "2025-10-02",
+        "badges": [
+            "Next.js",
+            "React",
+            "TailwindCSS",
+            "MongoDB",
+            "Spotify API",
+            "Gemini API",
+            "Pinata",
+            "Auth0"
+        ],
+        "summary": "",
         "gallery": []
     }
 ]

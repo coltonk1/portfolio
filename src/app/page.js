@@ -49,7 +49,15 @@ export default function Home() {
 
 function HeroSection() {
     return (
-        <section className="bg-gradient-to-r from-brand-purple to-brand-blue flex flex-col items-center w-full relative">
+        <section
+            className="bg-gradient-to-r from-brand-purple to-brand-blue flex flex-col items-center w-full relative"
+            style={{
+                WebkitMaskImage:
+                    'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%)',
+                maskImage:
+                    'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%)',
+            }}
+        >
             <div
                 // src={LineSrc.src}
                 alt="Hero lines"
@@ -190,7 +198,7 @@ function ClientWork() {
         .slice(0, 4);
 
     return (
-        <section className="max-w-6xl w-full px-6">
+        <section className="w-full px-6">
             <div className="mb-12">
                 <h2>Work for Clients</h2>
                 <p className="leading-relaxed mt-2">

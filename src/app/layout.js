@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" data-theme="main" suppressHydrationWarning>
             <head>
-                <link rel="preload" as="image" href={LineSrc.src} fetchpriority="high" />
+                <link rel="preload" as="image" href={LineSrc.src} fetchPriority="high" />
                 <ThemeScript />
             </head>
             <body

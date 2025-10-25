@@ -1,42 +1,40 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function ProjectPreview({ data }) {
-    if (!data) return;
+    if (!data) return null;
 
     return (
-        <Link href={`/case-studies/${data.slug}`}>
-            <motion.div
-                className="flex flex-col gap-6 md:gap-10 items-stretch cursor-pointer group hover:[&_h3]:decoration-brand-purple"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                    opacity: { duration: 0.75, ease: "easeOut" },
-                    y: { duration: 0.75, ease: "easeOut" },
-                    scale: { duration: 0.2, ease: "easeOut" },
-                }}
-                viewport={{ once: true, amount: 0.2 }}
-                whileTap={{ scale: 0.98 }}
-                whileHover={{
-                    scale: 1.02,
-                }}
-            >
-                {/* Image */}
-                <div className="w-full aspect-[16/9] relative rounded-sm shadow-[0_10px_20px_var(--color-brand-off-white)]">
-                    <img
-                        loading="lazy"
-                        src={data.preview}
-                        alt={`${data.title} preview`}
-                        className="absolute inset-0 w-full h-full object-cover object-top rounded-sm"
-                    />
+        <Link href={`/case-studies/${data.slug}`} className="block group cursor-pointer">
+            <div className="flex gap-6 md:gap-10 items-start">
+                {/* Image preview styled like a website window */}
+                <div className="relative w-full rounded-md shadow-sm h-fit">
+                    {/* Browser bar mockup */}
+                    {/* <div className="absolute top-0 left-0 right-0 h-7 bg-gray-100 flex items-center gap-1 px-3 border-b border-gray-200">
+                        <span className="w-3 h-3 rounded-full bg-red-400"></span>
+                        <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                        <span className="w-3 h-3 rounded-full bg-green-400"></span>
+                        <div className="ml-3 text-[10px] text-gray-500 truncate">
+                            {data.preview.replace(/^https?:\/\//, '')}
+                        </div>
+                    </div> */}
+
+                    <div className="overflow-scroll max-h-150">
+                        {/* Screenshot */}
+                        <img
+                            src={data.preview}
+                            alt={`${data.title} preview`}
+                            className="w-full object-cover object-top transition-transform duration-500 "
+                            loading="lazy"
+                        />
+                    </div>
                 </div>
 
                 {/* Content */}
                 <div className="w-full flex flex-col justify-center space-y-6">
                     <div className="flex flex-wrap items-center gap-2">
-                        <h3 className="text-xl w-full sm:text-2xl font-semibold transition underline decoration-brand-purple lg:decoration-transparent group-hover:brightness-150">
+                        <h3 className="text-xl w-full sm:text-2xl font-semibold underline decoration-transparent group-hover:decoration-brand-purple transition">
                             {data.title}
                         </h3>
                     </div>
@@ -45,7 +43,7 @@ export default function ProjectPreview({ data }) {
                         {data.badges?.map((tech, i) => (
                             <span
                                 key={i}
-                                className="text-xs border border-brand-blue !text-brand-blue px-2 py-1 rounded font-medium"
+                                className="text-xs border border-brand-blue text-brand-blue px-2 py-1 rounded font-medium"
                             >
                                 {tech}
                             </span>
@@ -73,11 +71,9 @@ export default function ProjectPreview({ data }) {
                 </div>
 
                 {!data.isActive && (
-                    <p className="italic opacity-50">
-                        Case study not yet available.
-                    </p>
+                    <p className="italic opacity-50">Case study not yet available.</p>
                 )}
-            </motion.div>
+            </div>
         </Link>
     );
 }

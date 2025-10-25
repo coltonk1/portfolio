@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useState } from "react";
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-brand-white border-b-2 border-brand-off-white z-50 sticky top-0">
-            <div className="flex justify-between items-center px-6 md:px-12 py-3">
+        <nav className="w-full bg-brand-white/90 backdrop-blur-md  z-50 sticky top-0">
+            <div className="flex justify-between items-center px-6 md:px-12 py-3 max-w-7xl mx-auto">
                 <h4 className="text-lg font-semibold">
                     <Link href="/" className="!px-0">
                         Colton Karaffa
@@ -55,18 +55,12 @@ export default function NavBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            href="/client-work"
-                            onClick={() => setIsOpen(false)}
-                        >
+                        <Link href="/client-work" onClick={() => setIsOpen(false)}>
                             Client Work
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            href="/personal-projects"
-                            onClick={() => setIsOpen(false)}
-                        >
+                        <Link href="/personal-projects" onClick={() => setIsOpen(false)}>
                             Personal Projects
                         </Link>
                     </li>
