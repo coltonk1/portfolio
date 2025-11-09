@@ -1,5 +1,5 @@
-import ProjectPreview from "@/components/ProjectPreview";
-import allData from "@/data/projects.json";
+import ProjectPreview from '@/components/ProjectPreview';
+import allData from '@/data/projects.json';
 
 export default function ClientWorkPage() {
     const recentClientProjects = allData
@@ -7,13 +7,12 @@ export default function ClientWorkPage() {
         .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     return (
-        <section className="max-w-6xl w-full px-6 mx-auto py-20">
-            <div className="mb-12">
-                <h2>Client Work</h2>
-                <p className="leading-relaxed mt-2 text-brand-grey">
-                    Projects I've designed and/or developed for clients, focused
-                    on solving real business problems with clean visuals and
-                    functional UX.
+        <section className="w-full px-6 mx-auto py-20">
+            <div className="mb-12 max-w-6xl mx-auto">
+                <h1 className="!text-brand-grey">Client Work</h1>
+                <p className="leading-relaxed mt-2 text-brand-grey max-w-4xl">
+                    Projects I've designed and/or developed for clients, focused on solving real
+                    business problems with clean visuals and functional UX.
                 </p>
             </div>
 

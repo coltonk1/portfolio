@@ -4,13 +4,13 @@
         "title": "TrackifyJobs",
         "role": "Full-stack Developer",
         "clientType": "Personal SaaS Project",
-        "preview": "/projects/trackifyjobs/main2.webp",
+        "preview": "/projects/trackifyjobs/landing.png",
         "full_res": "/projects/trackifyjobs/main.webp",
         "personal": true,
         "isActive": false,
         "date": "2025-04-15",
         "badges": ["Next.js", "Go", "Supabase", "Stripe API", "TailwindCSS", "Gemini API"],
-        "summary": "TrackifyJobs is a job tracking SaaS built for serious job seekers. It combines NLP resume scoring, automated follow-ups, and a streamlined dashboard to reduce stress and increase offer rates. The goal was to make application management effortless and intelligent.",
+        "summary": "TrackifyJobs is a job tracking software I built for tracking and refining my job applications. It combines NLP resume scoring, automated follow-ups, and a streamlined dashboard to reduce stress and increase offer rates. The goal was to make application management effortless and intelligent.",
         "sections": [
             {
                 "heading": "Context & Problem",
@@ -74,7 +74,7 @@
         "slug": "waste-company",
         "title": "Regional Waste Services",
         "role": "UI/UX Designer",
-        "clientType": "Local Waste Management Service",
+        "clientType": "Lead Developer",
         "personal": false,
         "isActive": true,
         "date": "2025-06-10",
@@ -172,7 +172,7 @@
         "slug": "children-dentist",
         "title": "Children's Dentistry",
         "role": "UI/UX Designer",
-        "clientType": "Frontend Developer",
+        "clientType": "Lead Developer",
         "personal": false,
         "isActive": true,
         "date": "2025-9-01",
@@ -290,7 +290,7 @@
         "title": "CodeHub Website",
         "role": "UI/UX Designer",
         "clientType": "Personal Project",
-        "preview": "/projects/codehub/preview.webp",
+        "preview": "/projects/codehub/preview.png",
         "personal": true,
         "isActive": false,
         "date": "2025-06-01",
@@ -321,7 +321,7 @@
     },
     {
         "slug": "boombox",
-        "title": "BoomBox – Mood-Based Music Recommendation App",
+        "title": "BoomBox - Mood-Based Music Recommendation App",
         "role": "Lead Developer & Full-Stack Engineer",
         "clientType": "Personal Project",
         "preview": "/projects/boombox/preview.webp",
@@ -348,20 +348,61 @@
         "clientType": "Local Management Company",
         "preview": "/projects/summit_landing.png",
         "personal": false,
-        "isActive": true,
+        "isActive": false,
         "date": "2025-10-01",
-        "badges": [
-            "Next.js",
-            "React",
-            "TailwindCSS",
-            "MongoDB",
-            "Spotify API",
-            "Gemini API",
-            "Pinata",
-            "Auth0"
+        "badges": ["Next.js", "React", "TailwindCSS", "Figma"],
+        "summary": "Summit Management & Development is a land management and development company based in North Georgia. They needed a professional online presence to represent their growing portfolio and communicate their values of reliability, transparency, and attention to detail. I designed and developed a custom site that reflected their brand identity while improving accessibility and SEO performance.",
+        "sections": [
+            {
+                "heading": "Context & Problem",
+                "body": "Summit Management & Development did not previously have a website, relying only on word-of-mouth and email referrals. Without an online presence, they lacked a professional platform to showcase projects, explain services, or attract new clients. Competitors in the region had established, well-optimized sites that made Summit harder to find and trust online.",
+                "images": ["/projects/summit/problem.webp"],
+                "bullets": [
+                    "No online presence or client-facing materials",
+                    "No SEO visibility or Google business integration",
+                    "No consistent brand identity or message"
+                ]
+            },
+            {
+                "heading": "Design & UX Goals",
+                "body": "My goal was to build a modern, trustworthy site that visually conveyed professionalism and stability. I designed a brand identity with an earthy, grounded color palette and geometric sans-serif typography. The layout prioritizes clarity—concise copy, wide spacing, and structured service sections. The homepage introduces the company mission, followed by a services overview and featured project highlights.",
+                "images": ["/projects/summit/wireframe.webp", "/projects/summit/mockup.webp"],
+                "bullets": [
+                    "Calm, confident visual tone inspired by architectural lines",
+                    "Simple, scannable content structure for clarity",
+                    "Fully responsive design optimized for mobile and tablet",
+                    "Optimized meta tags and schema markup for SEO visibility"
+                ]
+            },
+            {
+                "heading": "Technical Implementation",
+                "body": "The website was built using Next.js with the App Router and styled using Tailwind CSS. I structured the content with reusable components for scalability, ensuring fast load times and responsive behavior. Image optimization was handled through Next.js static export, and performance was tuned to score 95+ across Google Lighthouse metrics. The site includes custom meta fields and Open Graph data for rich link previews.",
+                "images": ["/projects/summit/structure.webp", "/projects/summit/seo-preview.webp"],
+                "bullets": [
+                    "Next.js + Tailwind CSS for modern static generation",
+                    "Component-based structure for maintainability",
+                    "Google Search Console setup and SEO indexing",
+                    "Fast static deployment for near-instant load times"
+                ]
+            },
+            {
+                "heading": "Outcome",
+                "body": "After launch, Summit gained a professional web presence that legitimized their brand and improved search ranking for regional keywords. The new site successfully captured leads through an optimized contact form and structured metadata. It now serves as a central marketing asset, referenced in their project proposals and client communications.",
+                "images": ["/projects/summit/live-preview.webp"],
+                "bullets": [
+                    "Established complete online presence with branded site",
+                    "Strong initial SEO performance in regional search results",
+                    "Improved client trust and lead generation",
+                    "Streamlined content updates for future scalability"
+                ]
+            }
         ],
-        "summary": "",
-        "gallery": []
+        "gallery": [
+            "/projects/summit/home.webp",
+            "/projects/summit/services.webp",
+            "/projects/summit/contact.webp",
+            "/projects/summit/portfolio.webp"
+        ]
     },
     {
         "slug": "swatc",
@@ -372,17 +413,57 @@
         "personal": false,
         "isActive": true,
         "date": "2025-10-02",
-        "badges": [
-            "Next.js",
-            "React",
-            "TailwindCSS",
-            "MongoDB",
-            "Spotify API",
-            "Gemini API",
-            "Pinata",
-            "Auth0"
+        "badges": ["Next.js", "React", "TailwindCSS", "Figma"],
+        "summary": "S.W.A.T. Construction is a Georgia-based contractor specializing in framing, drywall, and acoustical systems for commercial buildings. The company had no digital presence, so I created their complete brand identity and website from the ground up, from logo direction and design system to content layout and deployment.",
+        "sections": [
+            {
+                "heading": "Context & Problem",
+                "body": "For over 25 years, S.W.A.T. had built high-quality commercial structures across the Southeast, yet lacked an online identity to reflect their expertise. Without a website or consistent branding, they were invisible to potential clients searching locally for construction partners. The goal was to establish a trustworthy digital presence that communicated their legacy of reliability and craftsmanship.",
+                "images": ["/projects/swat_coming_soon.png"],
+                "bullets": [
+                    "No digital footprint or discoverable online presence",
+                    "Outdated communication limited to referrals and word of mouth",
+                    "No cohesive brand identity across print or proposals"
+                ]
+            },
+            {
+                "heading": "Design & Brand Direction",
+                "body": "The design needed to convey professionalism and strength while staying simple and timeless. I built a brand palette based on deep charcoal, clean white, and a signature construction red accent. The typography combines geometric sans-serifs for clarity with subtle contrast in headings to feel architectural. Layouts were designed to feel grounded and symmetrical, using high-quality imagery of projects and clean grid spacing.",
+                "bullets": [
+                    "Minimal design language inspired by construction precision",
+                    "Strong brand red accent to convey energy and reliability",
+                    "Hero imagery framed by geometric grid overlays for visual structure",
+                    "Consistent spacing and modular section rhythm across devices"
+                ]
+            },
+            {
+                "heading": "Website Structure & Development",
+                "body": "The site was developed using Next.js and Tailwind CSS for clean performance and scalability. I designed custom sections for services, company overview, industry specialization, testimonials, and a contact form. Each block is modular, meaning future service pages can be added easily without refactoring. I also optimized for SEO, accessibility, and Core Web Vitals, achieving 100 on desktop for all scores.",
+                "images": ["/projects/swat_page_insights.png"],
+                "bullets": [
+                    "Next.js + Tailwind CSS for efficient static site generation",
+                    "Responsive layout across all modern breakpoints",
+                    "SEO metadata and OpenGraph integration for discoverability",
+                    "Contact form integrated with Netlify Forms for direct submissions"
+                ]
+            },
+            {
+                "heading": "Outcome",
+                "body": "The new site established S.W.A.T.’s digital identity and positioned them competitively among regional contractors. The homepage emphasizes their legacy and service clarity while providing strong visual credibility. Early feedback from clients noted how the website reflected their professionalism and quality of work. The company now references the site in all proposals and client outreach.",
+                "images": ["/projects/swat_landing.png"],
+                "bullets": [
+                    "First professional web presence in company history",
+                    "Optimized SEO structure for local construction searches",
+                    "Consistent lead generation via form submissions",
+                    "Strong client feedback on design clarity and brand cohesion"
+                ]
+            }
         ],
-        "summary": "",
-        "gallery": []
+        "gallery": [
+            "/projects/swat_landing.png",
+            "/projects/swat_contact.png",
+            "/projects/swat_services.png",
+            "/projects/swat_about.png"
+        ]
     }
 ]

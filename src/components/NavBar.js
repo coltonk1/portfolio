@@ -27,9 +27,9 @@ export default function NavBar() {
                     <li>
                         <Link href="/">Home</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/services">Services & Pricing</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/client-work">Client Work</Link>
                     </li>

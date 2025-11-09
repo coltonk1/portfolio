@@ -36,11 +36,13 @@ export default function Home() {
                     <ClientWork />
                 </div>
                 <AboutMe />
-                <div className="flex flex-col gap-25 md:gap-40 lg:gap-70">
+
+                <ServicesOverview />
+                {/* <div className="flex flex-col gap-25 md:gap-40 lg:gap-70">
                     <PricingComparison />
                     <OutdatedHurtingSales />
                     <LetsWorkTogether />
-                </div>
+                </div> */}
             </main>
             <Footer />
         </>
@@ -58,9 +60,9 @@ function HeroSection() {
                     'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%)',
             }}
         >
+            {/* subtle background pattern */}
             <div
-                // src={LineSrc.src}
-                alt="Hero lines"
+                alt="Hero background lines"
                 draggable={false}
                 className="object-fill absolute select-none"
                 style={{
@@ -79,27 +81,31 @@ function HeroSection() {
             />
 
             <div className="w-full max-w-7xl px-6 md:px-12 py-16 sm:py-32 md:py-32 flex flex-col lg:flex-row gap-12 items-center z-10">
-                <div className="relative w-50 h-50 sm:w-65 sm:h-65 md:w-72 md:h-72 bg-gradient-to-t from-brand-off-white to-brand-white rounded-full border-4 border-brand-white overflow-hidden">
-                    <div className="relative z-10 w-full h-full">
-                        <img
-                            src={PortraitSrc.src}
-                            alt="Image of me"
-                            draggable={false}
-                            className="object-cover absolute w-full h-full"
-                            style={{ objectFit: 'cover' }}
-                        />
-                    </div>
+                {/* Portrait */}
+                <div className="relative w-50 h-50 sm:w-65 sm:h-65 md:w-72 md:h-72 bg-gradient-to-t from-brand-off-white to-brand-white rounded-full border-4 border-brand-white overflow-hidden shadow-lg">
+                    <img
+                        src={PortraitSrc.src}
+                        alt="Portrait of Colton Karaffa"
+                        draggable={false}
+                        className="object-cover absolute w-full h-full"
+                    />
                 </div>
 
+                {/* Text section */}
                 <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
-                    <h1 className="text-4xl sm:text-5xl font-bold !text-hero-color text-center w-full lg:text-left">
+                    <p className="!text-sm tracking-wide uppercase !text-hero-color/75 text-center lg:text-left mt-4">
+                        Web Design · Branding · SEO Optimization
+                    </p>
+                    <h1 className="text-4xl sm:text-5xl font-bold !text-hero-color text-center lg:text-left">
                         Hi, I'm <b className="!text-hero-color">Colton Karaffa</b>
                     </h1>
                     <p
                         id="hero-desc"
-                        className="text-lg !text-hero-color max-w-xl mx-auto md:mx-0 text-center w-full lg:text-left"
+                        className="text-lg !text-hero-color max-w-xl mx-auto md:mx-0 text-center lg:text-left leading-relaxed"
                     >
-                        I design and build modern, fast websites.
+                        I build modern websites that balance creative design with strong technical
+                        foundations. My work blends thoughtful branding, clean layouts, and fast,
+                        SEO-optimized code.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 md:gap-4 items-center justify-center lg:justify-start">
                         <Button variant={1} href={'/client-work'} text={'Client Work'} />
@@ -118,25 +124,6 @@ function HeroSection() {
     );
 }
 
-const mockData = {
-    title: 'TrackifyJobs',
-    image: '/projects/trackifyjobs/main2.webp',
-    badges: [
-        'Next.js',
-        'TypeScript',
-        'Tailwind CSS',
-        'Supabase',
-        'Firebase Auth',
-        'Python (NLP Scoring)',
-        'Gemini API',
-        'Go (Backend API)',
-        'Stripe API',
-    ],
-    description:
-        'TrackifyJobs is an all-in-one job search assistant that helps users track applications, analyze resumes, and stay organized throughout the job hunt.',
-    caseStudyUrl: '/trackifyjobs-case-study',
-};
-
 function SoloProjects() {
     const recentPersonalProjects = allData
         .filter((project) => project.personal === true)
@@ -144,52 +131,49 @@ function SoloProjects() {
         .slice(0, 4);
 
     return (
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-            <div className="mb-12 text-center sm:text-left">
-                <h2>Independent Projects</h2>
-                <p className="leading-relaxed mt-2">
-                    A few of my own projects to show how I solve real problems with code and design.
-                </p>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-8 lg:gap-24">
-                <div className="flex gap-8 md:gap-24 flex-col md:flex-1">
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentPersonalProjects[0]} />
-                    </div>
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentPersonalProjects[2]} />
-                    </div>
+        <section className="w-full bg-white py-28">
+            <div className="px-6 sm:px-10 lg:px-16">
+                {/* Header */}
+                <div className="mb-20 text-center sm:text-left max-w-7xl mx-auto">
+                    <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-4">
+                        Independent Projects
+                    </h2>
+                    <p className="text-brand-grey text-lg leading-relaxed max-w-2xl">
+                        Personal builds where I explore new frameworks, user interface systems, and
+                        creative solutions. Each project is a space to test ideas, refine technical
+                        craft, and design with purpose and precision.
+                    </p>
                 </div>
-                <div className="md:pt-32 flex gap-8 lg:gap-24 flex-col md:flex-1">
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentPersonalProjects[1]} />
-                    </div>
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentPersonalProjects[3]} />
-                    </div>
-                </div>
-            </div>
 
-            <div className="w-full flex flex-col items-center gap-4 mt-24 text-center">
-                <p className="text-base sm:text-lg text-brand-grey max-w-xl">
-                    Explore more projects that showcase my skills in full-stack development, backend
-                    systems, and applied machine learning.
-                </p>
-                <Button variant={3} href="/personal-projects" text="View Full Project Archive" />
+                {/* Projects Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+                    {recentPersonalProjects.map((project, index) => (
+                        <div key={index} className="group transition-all duration-500 ease-out">
+                            <div className="rounded-3xl overflow-hidden bg-white shadow-[0_2px_20px_rgba(0,0,0,0.03)]">
+                                <ProjectPreview data={project} />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Divider */}
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-300/40 to-transparent my-28"></div>
+
+                {/* CTA */}
+                <div className="text-center space-y-4 flex flex-col items-center">
+                    <p className="text-brand-grey text-base sm:text-lg">
+                        Explore more of my personal experiments and full-stack builds.
+                    </p>
+                    <Button
+                        variant={3}
+                        href="/personal-projects"
+                        text="View Full Project Archive"
+                    />
+                </div>
             </div>
         </section>
     );
 }
-
-const clientMockData = {
-    title: 'Childrens Dental Site',
-    image: '/projects/smiledental/preview.webp',
-    role: 'UI/UX Designer & Frontend Developer',
-    clientType: 'Private Dental Practice',
-    badges: ['Figma', 'React', 'Tailwind CSS', 'Netlify'],
-    caseStudyUrl: '/smile-dental-case-study',
-};
 
 function ClientWork() {
     const recentClientProjects = allData
@@ -198,35 +182,41 @@ function ClientWork() {
         .slice(0, 4);
 
     return (
-        <section className="w-full px-6">
-            <div className="mb-12">
-                <h2>Work for Clients</h2>
-                <p className="leading-relaxed mt-2">
-                    Websites and interfaces I've built and/or designed, with a focus on clarity,
-                    usability, and purposeful visual design.
-                </p>
-            </div>
-            <div className="flex flex-col md:flex-row gap-8 lg:gap-24">
-                <div className="flex gap-8 md:gap-24 flex-col flex-1">
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentClientProjects[0]} />
-                    </div>
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentClientProjects[2]} />
-                    </div>
+        <section className="w-full bg-brand-off-white/30 py-28">
+            <div className="px-6 sm:px-10 lg:px-16">
+                {/* Header */}
+                <div className="mb-20 text-center sm:text-left max-w-7xl mx-auto ">
+                    <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-4">
+                        Client Work
+                    </h2>
+                    <p className="text-brand-grey text-lg leading-relaxed max-w-2xl">
+                        A selection of websites and interfaces designed and developed for small
+                        businesses and organizations. Each build blends design clarity with
+                        performance and precision.
+                    </p>
                 </div>
-                <div className="md:pt-32 flex gap-8 lg:gap-24 flex-col flex-1">
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentClientProjects[1]} />
-                    </div>
-                    <div className="break-inside-avoid">
-                        <ProjectPreview data={recentClientProjects[3]} />
-                    </div>
+
+                {/* Projects Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+                    {recentClientProjects.map((project, index) => (
+                        <div key={index} className="group transition-all duration-500 ease-out">
+                            <div className="rounded-3xl overflow-hidden bg-white">
+                                <ProjectPreview data={project} />
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            </div>
-            <div className="w-full flex flex-col items-center gap-2 mt-15 md:mt-24">
-                <p>Want to see more of my design work?</p>
-                <Button variant={3} href="/client-work" text="Browse Full Design Portfolio" />
+
+                {/* Divider */}
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-300/40 to-transparent my-28"></div>
+
+                {/* CTA */}
+                <div className="text-center space-y-4 flex flex-col items-center">
+                    <p className="text-brand-grey text-base sm:text-lg">
+                        Explore more design and development projects across industries.
+                    </p>
+                    <Button variant={3} href="/client-work" text="Browse Full Portfolio" />
+                </div>
             </div>
         </section>
     );
@@ -234,24 +224,34 @@ function ClientWork() {
 
 function AboutMe() {
     return (
-        <section className="w-full bg-brand-translucent-purple flex flex-col items-center py-15 lg:py-25">
+        <section className="w-full bg-brand-translucent-purple flex flex-col items-center py-20 lg:py-28">
             <div className="max-w-6xl mx-6">
-                <h2 className="mb-12 text-center lg:text-left">About Me</h2>
+                <h2 className="mb-12 text-center lg:text-left text-3xl font-bold">About Me</h2>
 
-                <div className="lg:grid lg:grid-cols-[1fr_auto] gap-12">
-                    <div className="flex flex-col gap-12 items-center lg:items-baseline">
-                        <p className="leading-loose text-center lg:text-left">
-                            {`I'm `}
-                            <b>Colton Karaffa</b>
-                            {`, a full-stack developer and UI designer in my final year of Computer Science at the University of Georgia.
-
-I handle everything from designing intuitive interfaces in Figma to building scalable backends in Go and deploying production-ready web apps. My work spans solo personal projects, technical case studies, and real freelance sites for clients across industries like real estate, education, and services.
-
-I focus on building fast, usable, and cleanly designed software that actually works.`}
+                <div className="lg:grid lg:grid-cols-[1fr_auto] gap-12 items-center">
+                    {/* Text Content */}
+                    <div className="flex flex-col gap-10 items-center lg:items-start">
+                        <p className="leading-loose text-center lg:text-left text-brand-grey max-w-2xl">
+                            I'm Colton Karaffa, a full-stack developer and designer studying
+                            Computer Science at the University of Georgia. I bring together visual
+                            design and technical development to create websites that are both
+                            elegant and high-performing.
+                        </p>
+                        <p className="leading-loose text-center lg:text-left text-brand-grey max-w-2xl">
+                            My work combines creativity with structure. I've partnered with small
+                            businesses to develop full digital identities, handling everything from
+                            brand design in Figma to responsive, SEO-optimized websites built with
+                            React and Next.js.
+                        </p>
+                        <p className="leading-loose text-center lg:text-left text-brand-grey max-w-2xl">
+                            I focus on making every project clear, fast, and visually cohesive so
+                            the final product communicates a message effectively and feels
+                            effortless to use.
                         </p>
                         <Button variant={4} href={'/contact'} text={'Contact Me'} />
                     </div>
 
+                    {/* Image */}
                     <div
                         className="relative hidden lg:block"
                         style={{
@@ -262,9 +262,9 @@ I focus on building fast, usable, and cleanly designed software that actually wo
                         <img
                             src={SitesSrc.src}
                             loading="lazy"
-                            alt="3d view of pages"
+                            alt="3D preview of site designs"
                             draggable={false}
-                            className="absolute w-full h-full object-contain object-top brightness-120"
+                            className="absolute w-full h-full object-contain object-top brightness-130"
                         />
                     </div>
                 </div>
@@ -641,5 +641,43 @@ function LetsWorkTogether() {
                 <p className="italic opacity-80 text-xs">Typically replies within 24 hours.</p>
             </div>
         </section>
+    );
+}
+
+function ServicesOverview() {
+    return (
+        <>
+            <section className="max-w-6xl mx-auto px-6 py-20">
+                <h2 className="text-3xl font-bold mb-4">What I Offer</h2>
+                <p className="max-w-2xl text-brand-grey mb-12">
+                    I specialize in modern web design and development, combining visual design,
+                    branding, and technical performance to build websites that help brands stand
+                    out.
+                </p>
+                <div className="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2">Web Design</h3>
+                        <p>
+                            Clean, responsive layouts crafted in Figma and built for clarity and
+                            usability.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2">Development</h3>
+                        <p>
+                            Next.js and React builds focused on SEO, speed, and seamless user
+                            experience.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-semibold mb-2">Branding</h3>
+                        <p>
+                            Logo, typography, and visual identity systems that align design and
+                            purpose.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </>
     );
 }
