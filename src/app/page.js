@@ -131,7 +131,7 @@ function SoloProjects() {
         .slice(0, 4);
 
     return (
-        <section className="w-full bg-white py-28">
+        <section className="w-full py-28">
             <div className="px-6 sm:px-10 lg:px-16">
                 {/* Header */}
                 <div className="mb-20 text-center sm:text-left max-w-7xl mx-auto">
@@ -149,7 +149,7 @@ function SoloProjects() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
                     {recentPersonalProjects.map((project, index) => (
                         <div key={index} className="group transition-all duration-500 ease-out">
-                            <div className="rounded-3xl overflow-hidden bg-white shadow-[0_2px_20px_rgba(0,0,0,0.03)]">
+                            <div className="">
                                 <ProjectPreview data={project} />
                             </div>
                         </div>
@@ -182,7 +182,7 @@ function ClientWork() {
         .slice(0, 4);
 
     return (
-        <section className="w-full bg-brand-off-white/30 py-28">
+        <section className="w-full py-28">
             <div className="px-6 sm:px-10 lg:px-16">
                 {/* Header */}
                 <div className="mb-20 text-center sm:text-left max-w-7xl mx-auto ">
@@ -200,7 +200,7 @@ function ClientWork() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
                     {recentClientProjects.map((project, index) => (
                         <div key={index} className="group transition-all duration-500 ease-out">
-                            <div className="rounded-3xl overflow-hidden bg-white">
+                            <div className="">
                                 <ProjectPreview data={project} />
                             </div>
                         </div>

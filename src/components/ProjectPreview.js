@@ -12,7 +12,7 @@ export default function ProjectPreview({ data }) {
         >
             <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
                 {/* Scrollable website mockup */}
-                <div className="relative w-full md:w-1/2 rounded-lg overflow-hidden shadow-md bg-brand-white">
+                <div className="relative w-full md:w-1/2 rounded-lg overflow-hidden shadow-md ">
                     <div className="overflow-y-scroll max-h-[500px] scrollbar-thin scrollbar-thumb-brand-purple/40 hover:scrollbar-thumb-brand-purple/60">
                         <img
                             src={data.preview}
